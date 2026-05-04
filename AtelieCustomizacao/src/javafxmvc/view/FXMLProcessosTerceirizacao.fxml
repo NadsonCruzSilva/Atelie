@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmvc.controller.FXMLProcessosTerceirizacaoController">
+   <children>
+      <Label layoutX="14.0" layoutY="10.0" style="-fx-font-size: 14; -fx-font-weight: bold;" text="Terceirização - Encaminhamentos às Fábricas" />
+      <TableView fx:id="tableViewEncaminhamento" layoutX="14.0" layoutY="35.0" prefHeight="280.0" prefWidth="620.0">
+        <columns>
+          <TableColumn fx:id="tableColumnEncId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="tableColumnEncFabrica" prefWidth="545.0" text="Fábrica Parceira" />
+        </columns>
+      </TableView>
+      <Button fx:id="buttonInserir" layoutX="14.0" layoutY="330.0" mnemonicParsing="false" onAction="#handleButtonInserir" prefWidth="160.0" text="Novo Encaminhamento" />
+      <Button fx:id="buttonRemover" layoutX="184.0" layoutY="330.0" mnemonicParsing="false" onAction="#handleButtonRemover" prefWidth="100.0" text="Remover" />
+   </children>
+</AnchorPane>

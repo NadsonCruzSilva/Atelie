@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="650.0" prefWidth="900.0"
+      stylesheets="@atelie.css"
+      xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="javafxmvc.controller.FXMLVBoxMainController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Cadastros">
+            <items>
+              <MenuItem fx:id="menuItemCadastrosClientes" mnemonicParsing="false" onAction="#handleMenuItemCadastrosClientes" text="Clientes" />
+              <MenuItem fx:id="menuItemCadastrosFabricaParceira" mnemonicParsing="false" onAction="#handleMenuItemCadastrosFabricaParceira" text="Fábricas Parceiras" />
+              <MenuItem fx:id="menuItemCadastrosTipoServico" mnemonicParsing="false" onAction="#handleMenuItemCadastrosTipoServico" text="Tipos de Serviço" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Processos">
+            <items>
+              <MenuItem fx:id="menuItemProcessosAtendimento" mnemonicParsing="false" onAction="#handleMenuItemProcessosAtendimento" text="Atendimento" />
+              <MenuItem fx:id="menuItemProcessosTerceirizacao" mnemonicParsing="false" onAction="#handleMenuItemProcessosTerceirizacao" text="Terceirização" />
+              <MenuItem fx:id="menuItemProcessosRetorno" mnemonicParsing="false" onAction="#handleMenuItemProcessosRetorno" text="Retorno" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Gráficos">
+            <items>
+              <MenuItem fx:id="menuItemGraficosStatus" mnemonicParsing="false" onAction="#handleMenuItemGraficosStatus" text="Status" />
+              <MenuItem fx:id="menuItemGraficosVolume" mnemonicParsing="false" onAction="#handleMenuItemGraficosVolume" text="Volume por Fábrica" />
+              <MenuItem fx:id="menuItemGraficosReceita" mnemonicParsing="false" onAction="#handleMenuItemGraficosReceita" text="Receita Mensal" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Relatórios">
+            <items>
+              <MenuItem fx:id="menuItemRelatoriosOrdensAtraso" mnemonicParsing="false" onAction="#handleMenuItemRelatoriosOrdensAtraso" text="Ordens em Atraso" />
+              <MenuItem fx:id="menuItemRelatoriosRankingFabricas" mnemonicParsing="false" onAction="#handleMenuItemRelatoriosRankingFabricas" text="Ranking de Fábricas" />
+              <MenuItem fx:id="menuItemRelatoriosReceitaServicos" mnemonicParsing="false" onAction="#handleMenuItemRelatoriosReceitaServicos" text="Receita de Serviços" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Sistema">
+            <items>
+              <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem fx:id="menuItemSair" mnemonicParsing="false" onAction="#handleMenuItemSair" text="Sair / Logout" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane fx:id="anchorPane" VBox.vgrow="ALWAYS" />
+   </children>
+</VBox>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0"
+            stylesheets="@atelie.css"
+            xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="javafxmvc.controller.FXMLLoginController">
+
+    <children>
+        <!-- Painel esquerdo decorativo -->
+        <VBox alignment="CENTER" layoutX="0.0" layoutY="0.0" prefHeight="500.0" prefWidth="380.0"
+              style="-fx-background-color: linear-gradient(to bottom, #3A9B45, #2d7a35);">
+            <children>
+                <Label text="✂" style="-fx-font-size: 64px; -fx-text-fill: #C8232A;" />
+                <Label text="Ateliê de" style="-fx-font-size: 30px; -fx-text-fill: #ffffff; -fx-font-weight: bold;" />
+                <Label text="Customização" style="-fx-font-size: 30px; -fx-text-fill: #ffffff; -fx-font-weight: bold;" />
+                <Label text="" prefHeight="12.0" />
+                <Label text="Sistema de Gestão" style="-fx-font-size: 15px; -fx-text-fill: #f0f4f0; -fx-font-style: italic;" />
+                <Label text="" prefHeight="30.0" />
+                <Label wrapText="true" maxWidth="280.0" alignment="CENTER"
+                       style="-fx-text-fill: #d0e8d2; -fx-font-size: 12px; -fx-text-alignment: center;"
+                       text="Gerencie clientes, ordens de serviço, fábricas parceiras e muito mais." />
+            </children>
+        </VBox>
+
+        <!-- Divisor -->
+        <Separator layoutX="380.0" layoutY="0.0" prefHeight="500.0" orientation="VERTICAL"
+                   style="-fx-background-color: #C8232A;" />
+
+        <!-- Painel de Login (direita) -->
+        <VBox alignment="CENTER" layoutX="400.0" layoutY="0.0" prefHeight="500.0" prefWidth="400.0" spacing="0"
+              style="-fx-background-color: #ffffff;">
+            <children>
+                <VBox alignment="CENTER" spacing="20.0" style="-fx-padding: 40px 50px;">
+                    <children>
+                        <!-- Título do formulário -->
+                        <Label text="Entrar no Sistema" styleClass="login-titulo" style="-fx-font-size: 22px;" />
+                        <Label text="Informe suas credenciais para continuar" styleClass="login-subtitulo" />
+
+                        <Label prefHeight="10.0" />
+
+                        <!-- Campo Usuário -->
+                        <VBox spacing="6.0">
+                            <children>
+                                <Label text="USUÁRIO" styleClass="login-label" />
+                                <TextField fx:id="textFieldUsuario" styleClass="login-field"
+                                           promptText="Digite seu usuário" prefWidth="300.0" />
+                            </children>
+                        </VBox>
+
+                        <!-- Campo Senha -->
+                        <VBox spacing="6.0">
+                            <children>
+                                <Label text="SENHA" styleClass="login-label" />
+                                <PasswordField fx:id="passwordFieldSenha" styleClass="login-field"
+                                              promptText="Digite sua senha" prefWidth="300.0" />
+                            </children>
+                        </VBox>
+
+                        <!-- Mensagem de erro -->
+                        <Label fx:id="labelErro" styleClass="login-erro" text="" prefWidth="300.0" />
+
+                        <!-- Botão Entrar -->
+                        <Button fx:id="buttonEntrar" text="ENTRAR"
+                                styleClass="login-button"
+                                prefWidth="300.0"
+                                onAction="#handleButtonEntrar"
+                                defaultButton="true" />
+
+                        <Label text="admin / admin  —  padrão de acesso" styleClass="login-rodape" />
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
