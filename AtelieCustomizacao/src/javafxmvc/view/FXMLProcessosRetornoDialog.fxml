@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane prefHeight="320.0" prefWidth="440.0"
+            xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="javafxmvc.controller.FXMLProcessosRetornoDialogController">
+   <children>
+
+      <!-- Cabeçalho -->
+      <Label layoutX="14.0" layoutY="14.0"
+             style="-fx-font-size: 15; -fx-font-weight: bold;"
+             text="Confirmação de Retorno e Pagamento" />
+
+      <!-- Painel de detalhes da OS -->
+      <GridPane layoutX="14.0" layoutY="46.0" prefWidth="410.0" hgap="8" vgap="8">
+         <columnConstraints>
+            <ColumnConstraints hgrow="NEVER"  minWidth="130.0" prefWidth="130.0"/>
+            <ColumnConstraints hgrow="ALWAYS" minWidth="10.0"  prefWidth="260.0"/>
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="28.0" prefHeight="28.0"/>
+            <RowConstraints minHeight="28.0" prefHeight="28.0"/>
+            <RowConstraints minHeight="28.0" prefHeight="28.0"/>
+            <RowConstraints minHeight="28.0" prefHeight="28.0"/>
+            <RowConstraints minHeight="28.0" prefHeight="28.0"/>
+            <RowConstraints minHeight="28.0" prefHeight="28.0"/>
+            <RowConstraints minHeight="38.0" prefHeight="38.0"/>
+         </rowConstraints>
+         <children>
+
+            <!-- Linha 0: ID da OS -->
+            <Label text="Nº da OS:"       style="-fx-font-weight: bold;"     GridPane.rowIndex="0"/>
+            <Label fx:id="labelOsId"                                          GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <!-- Linha 1: Cliente -->
+            <Label text="Cliente:"        style="-fx-font-weight: bold;"     GridPane.rowIndex="1"/>
+            <Label fx:id="labelCliente"                                       GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <!-- Linha 2: Data de Abertura -->
+            <Label text="Abertura:"       style="-fx-font-weight: bold;"     GridPane.rowIndex="2"/>
+            <Label fx:id="labelAbertura"                                      GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+            <!-- Linha 3: Data Prevista -->
+            <Label text="Data Prevista:"  style="-fx-font-weight: bold;"     GridPane.rowIndex="3"/>
+            <Label fx:id="labelPrevista"                                      GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+            <!-- Linha 4: Status Atual -->
+            <Label text="Status Atual:"   style="-fx-font-weight: bold;"     GridPane.rowIndex="4"/>
+            <Label fx:id="labelStatus"                                        GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+            <!-- Linha 5: Valor Registrado -->
+            <Label text="Valor Registrado:" style="-fx-font-weight: bold;"   GridPane.rowIndex="5"/>
+            <Label fx:id="labelValorRegistrado"                               GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+            <!-- Linha 6: Valor Final (editável) -->
+            <Label text="Valor Final (R$):"
+                   style="-fx-font-weight: bold; -fx-text-fill: #2E4057;"    GridPane.rowIndex="6"/>
+            <TextField fx:id="textFieldValorFinal"
+                       promptText="Deixe vazio para manter o valor atual"
+                       GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+         </children>
+      </GridPane>
+
+      <!-- Separador -->
+      <Separator layoutX="14.0" layoutY="270.0" prefWidth="410.0"/>
+
+      <!-- Botões -->
+      <Button fx:id="buttonConfirmar"
+              layoutX="230.0" layoutY="284.0" prefWidth="90.0"
+              mnemonicParsing="false"
+              onAction="#handleButtonConfirmar"
+              text="Confirmar"
+              style="-fx-background-color: #2E4057; -fx-text-fill: white; -fx-font-weight: bold;"/>
+      <Button fx:id="buttonCancelar"
+              layoutX="330.0" layoutY="284.0" prefWidth="80.0"
+              mnemonicParsing="false"
+              onAction="#handleButtonCancelar"
+              text="Cancelar"/>
+
+   </children>
+</AnchorPane>

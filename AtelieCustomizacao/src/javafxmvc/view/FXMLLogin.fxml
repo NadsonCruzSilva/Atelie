@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" stylesheets="@atelie.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmvc.controller.FXMLLoginController">
+
+    <children>
+        <!-- Painel esquerdo decorativo -->
+        <VBox alignment="CENTER" layoutX="0.0" layoutY="0.0" prefHeight="500.0" prefWidth="380.0" style="-fx-background-color: linear-gradient(to bottom, #3A9B45, #2d7a35);">
+            <children>
+                <Label style="-fx-font-size: 30px; -fx-text-fill: #ffffff; -fx-font-weight: bold;" text="Ateliê de" />
+                <Label style="-fx-font-size: 30px; -fx-text-fill: #ffffff; -fx-font-weight: bold;" text="Customização" />
+                <Label prefHeight="12.0" text="" />
+                <Label style="-fx-font-size: 15px; -fx-text-fill: #f0f4f0; -fx-font-style: italic;" text="Programação Orientada a Objetos II" />
+                <Label prefHeight="30.0" text="" />
+            </children>
+        </VBox>
+
+        <!-- Divisor -->
+        <Separator layoutX="380.0" layoutY="0.0" orientation="VERTICAL" prefHeight="500.0" prefWidth="3.0" style="-fx-background-color: #C8232A;" />
+
+        <!-- Painel de Login (direita) -->
+        <VBox alignment="CENTER" layoutX="400.0" layoutY="0.0" prefHeight="500.0" prefWidth="400.0" spacing="0" style="-fx-background-color: #ffffff;">
+            <children>
+                <VBox alignment="CENTER" spacing="20.0" style="-fx-padding: 40px 50px;">
+                    <children>
+                        <!-- Título do formulário -->
+                        <Label style="-fx-font-size: 22px;" styleClass="login-titulo" text="Entrar no Sistema" />
+                        <Label styleClass="login-subtitulo" text="Informe suas credenciais para continuar" />
+
+                        <Label prefHeight="10.0" />
+
+                        <!-- Campo Usuário -->
+                        <VBox spacing="6.0">
+                            <children>
+                                <Label styleClass="login-label" text="USUÁRIO" />
+                                <TextField fx:id="textFieldUsuario" prefWidth="300.0" promptText="Digite seu usuário" styleClass="login-field" />
+                            </children>
+                        </VBox>
+
+                        <!-- Campo Senha -->
+                        <VBox spacing="6.0">
+                            <children>
+                                <Label styleClass="login-label" text="SENHA" />
+                                <PasswordField fx:id="passwordFieldSenha" prefWidth="300.0" promptText="Digite sua senha" styleClass="login-field" />
+                            </children>
+                        </VBox>
+
+                        <!-- Mensagem de erro -->
+                        <Label fx:id="labelErro" prefWidth="300.0" styleClass="login-erro" text="" />
+
+                        <!-- Botão Entrar -->
+                        <Button fx:id="buttonEntrar" defaultButton="true" onAction="#handleButtonEntrar" prefWidth="300.0" styleClass="login-button" text="ENTRAR" />
+
+                        <Label styleClass="login-rodape" text="admin / admin  —  padrão de acesso" />
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

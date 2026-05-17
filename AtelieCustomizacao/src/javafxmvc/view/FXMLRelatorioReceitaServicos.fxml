@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmvc.controller.FXMLRelatorioReceitaServicosController">
+   <children>
+      <SplitPane dividerPositions="0.2" orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Relatório: Receita de Serviços">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="56.0" text="Filtro (Descrição):" />
+                  <TextField fx:id="textFieldFiltro" layoutX="130.0" layoutY="52.0" prefHeight="25.0" prefWidth="300.0" />
+                  <Button fx:id="buttonFiltrar" layoutX="440.0" layoutY="52.0" mnemonicParsing="false" onAction="#handleButtonFiltrar" text="Filtrar" />
+                  <Button fx:id="buttonImprimir" layoutX="670.0" layoutY="52.0" mnemonicParsing="false" onAction="#handleButtonImprimir" text="Imprimir PDF (Jasper)" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="tableViewReceita" prefHeight="475.0" prefWidth="798.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="tableColumnDescricao" prefWidth="300.0" text="Tipo de Serviço" />
+                      <TableColumn fx:id="tableColumnValorUnitario" minWidth="0.0" prefWidth="150.0" text="Valor Unit." />
+                        <TableColumn fx:id="tableColumnQuantidade" prefWidth="150.0" text="Qtd. Vendida" />
+                        <TableColumn fx:id="tableColumnReceitaTotal" prefWidth="190.0" text="Receita Total" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

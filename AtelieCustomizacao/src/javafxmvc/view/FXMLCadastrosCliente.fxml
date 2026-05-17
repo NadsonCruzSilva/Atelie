@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmvc.controller.FXMLCadastrosClienteController">
+   <children>
+      <TableView fx:id="tableViewCliente" layoutX="14.0" layoutY="14.0" prefHeight="260.0" prefWidth="390.0">
+        <columns>
+          <TableColumn fx:id="tableColumnClienteId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="tableColumnClienteName" prefWidth="315.0" text="Nome" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="420.0" layoutY="14.0" prefHeight="260.0" prefWidth="210.0" style="-fx-border-color: lightgray; -fx-padding: 10;">
+        <children>
+          <Label layoutX="0.0" layoutY="0.0" style="-fx-font-weight: bold;" text="Detalhes" />
+          <Label layoutX="0.0" layoutY="25.0" text="Nome:" />
+          <Label fx:id="labelNome" layoutX="60.0" layoutY="25.0" prefWidth="140.0" />
+          <Label layoutX="0.0" layoutY="50.0" text="CPF:" />
+          <Label fx:id="labelCpf" layoutX="60.0" layoutY="50.0" prefWidth="140.0" />
+          <Label layoutX="0.0" layoutY="75.0" text="Telefone:" />
+          <Label fx:id="labelTelefone" layoutX="70.0" layoutY="75.0" prefWidth="140.0" />
+          <Label layoutX="0.0" layoutY="100.0" text="Endereço:" />
+          <Label fx:id="labelEndereco" layoutX="70.0" layoutY="100.0" prefWidth="140.0" />
+        </children>
+      </AnchorPane>
+      <Button fx:id="buttonInserir" layoutX="14.0" layoutY="295.0" mnemonicParsing="false" onAction="#handleButtonInserir" prefWidth="90.0" text="Inserir" />
+      <Button fx:id="buttonAlterar" layoutX="114.0" layoutY="295.0" mnemonicParsing="false" onAction="#handleButtonAlterar" prefWidth="90.0" text="Alterar" />
+      <Button fx:id="buttonRemover" layoutX="214.0" layoutY="295.0" mnemonicParsing="false" onAction="#handleButtonRemover" prefWidth="90.0" text="Remover" />
+   </children>
+</AnchorPane>
